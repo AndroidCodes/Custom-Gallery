@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_custom_gallery_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="5"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/lv_album_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3.4"
+            android:dividerHeight="2dp" />
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/background_dark" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6" >
+
+            <GridView
+                android:id="@+id/gv_imgs_according_to_albums"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:horizontalSpacing="5dp"
+                android:numColumns="2"
+                android:verticalSpacing="3dp" />
+
+            <TextView
+                android:id="@+id/tv_no_images"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="No Images In This Album"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

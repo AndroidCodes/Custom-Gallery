@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <!-- android:background="@drawable/bg_main" -->
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/bg_subicons" -->
+
+        <RelativeLayout
+            android:id="@+id/layoutsettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/imgViewGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClick" />
+            <!-- android:src="@drawable/selector_image_change" /> -->
+
+            <ImageView
+                android:id="@+id/imgViewSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/imgViewGallery"
+                android:onClick="onClick" />
+            <!-- android:src="@drawable/selector_setting" /> -->
+
+            <ImageView
+                android:id="@+id/imgViewSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:onClick="onClick" />
+            <!-- android:src="@drawable/selector_save" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutdoneback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:onClick="onClick" />
+            <!-- android:src="@drawable/selector_back" /> -->
+
+            <ImageView
+                android:id="@+id/imgViewDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:onClick="onClick" />
+            <!-- android:src="@drawable/selector_done" /> -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.example.funphotoeffects.CollageView
+        android:id="@+id/collageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
